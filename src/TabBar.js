@@ -188,8 +188,8 @@ export default class TabBar<T: *> extends React.Component<Props<T>, State> {
     const translateX = Animated.multiply(
       Animated.multiply(
         position.interpolate({
-          inputRange: [0, navigationState.routes.length - 1],
-          outputRange: [0, navigationState.routes.length - 1],
+          inputRange: [-1, navigationState.routes.length - 1],
+          outputRange: [-1, navigationState.routes.length - 1],
           extrapolate: 'clamp',
         }),
         width
